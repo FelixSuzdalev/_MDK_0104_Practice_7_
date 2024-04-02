@@ -12,7 +12,7 @@ namespace _MDK_0104_Practice_7_
 
             try
             { 
-                BinaryWriter F = new BinaryWriter(new FileStream("weather.txt", FileMode.OpenOrCreate));
+                BinaryWriter F = new BinaryWriter(new FileStream("weather.txt", FileMode.Create));
                 Random random = new Random();
                 
                 for (int i = 0; i < 12; i++)
@@ -55,7 +55,7 @@ namespace _MDK_0104_Practice_7_
                 
                 averageValueWeather = read.ReadDouble();
                 Console.WriteLine();
-                Console.WriteLine($"Среднегодовая температура в файле: {averageValueWeather} ");
+                Console.WriteLine($"Среднегодовая температура в файле: {averageValueWeather:f1} ");
 
                 read.Close();
             }
